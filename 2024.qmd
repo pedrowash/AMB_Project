@@ -1,0 +1,252 @@
+
+```{r}
+#| echo: false
+#| message: false
+#| error: false
+#| warning: false
+
+
+
+
+library(tidyverse)
+library(plotly)
+library(echarts4r)
+library(quarto)
+library(kableExtra)
+
+
+# 
+dfag <- read.csv("data/AGD.csv", header = T)
+dfat <- read.csv("data/ATD.csv", header = T)
+
+dfag$Ano <- forcats::as_factor(dfag$Ano)
+dfag$Meses <- forcats::as_factor(dfag$Meses)
+dfag$Agendamentos <- forcats::as_factor(dfag$Agendamentos)
+dfat$Ano <- forcats::as_factor(dfat$Ano)
+dfat$Meses <- forcats::as_factor(dfat$Meses)
+dfat$Classificacao<- forcats::as_factor(dfat$Classificacao)
+```
+
+# Ano: 2024 | Período: Janeiro - Agosto {.unnumbered}
+
+## Agendamentos
+
+::: panel-tabset
+## Parte A
+
+```{r}
+#| echo: false
+#| message: false
+#| error: false
+#| warning: false
+
+dfag |> filter(
+    Ano == 2024
+  ) |> group_by(Ano) |> 
+  summarise(Total = sum(Quantidade))|> 
+  # mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1)) |> 
+   kbl(caption = "Tabela 1.1. Frequência absoluta: Agendamentos.",
+      col.names = c("Ano", 
+                    "Frequência Absoluta"),
+        align = 'ccc',
+        ) |> 
+  kable_minimal(full_width = F, html_font = "Cambria", c("hover", "striped")) |> 
+  column_spec(1, color = "black", bold = T, italic = T) |> 
+  column_spec(2, color = "darkblue", bold = T) |> 
+  # column_spec(3, color = "darkred", bold = T) |> 
+  footnote(general = "Tasy.",
+           general_title = "Fonte: ", 
+           number_title = "Type I: ",
+           footnote_as_chunk = T) 
+```
+
+## Parte B
+
+```{r}
+#| echo: false
+#| message: false
+#| error: false
+#| warning: false
+
+dfag |> filter(
+  Ano == 2024
+  ) |> group_by(Ano, Agendamentos) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1)) |> 
+  kbl(caption = "Tabela 1.2. Frequências absoluta e relativa: Classificações de Agendamento  <br><i>Valores agrupados por ano e classificações.</i>",
+      col.names = c("Ano", 
+                    "Classificações de Agendamento",
+                    "Frequência Absoluta",
+                    "Frequência relativa (em%)"),
+        align = 'ccc',
+        ) |> 
+  kable_minimal(full_width = F, html_font = "Cambria", c("hover", "striped")) |> 
+   column_spec(1, color = "black", bold = T, italic = T) |> 
+   column_spec(2, color = "darkgray", bold = F, italic = T) |> 
+  column_spec(3, color = "darkblue", bold = T) |> 
+  column_spec(4, color = "darkred", bold = T) |> 
+  footnote(general = "Tasy.",
+           general_title = "Fonte: ", 
+           number_title = "Type I: ",
+           footnote_as_chunk = T)
+```
+
+## Parte C
+
+```{r}
+#| echo: false
+#| message: false
+#| error: false
+#| warning: false
+
+
+dfag |> group_by(Agendamentos) |>
+  filter(
+   Ano == 2024
+  ) |> 
+  e_charts(Meses, timeline = T) |> 
+  e_bar(Quantidade, symbol_size = 5,name = "Frequência:", itemStyle = list(
+    borderColor = "darkgrey", borderWidth = '.7') ) |> 
+  # e_labels(position = 'insideTop') |> 
+  e_legend(show = FALSE) |> 
+  e_theme("essos") |> 
+  e_tooltip(trigger = "axis",
+  valueFormatter = htmlwidgets::JS("
+              (value) => '' + Number(value).toFixed(0)
+                                        "))
+
+```
+
+## Parte D
+
+```{r}
+#| echo: false
+#| message: false
+#| error: false
+#| warning: false
+
+
+dfag |> 
+  filter(
+    Ano == 2024
+  ) |> group_by(Agendamentos) |> 
+  e_charts() |> 
+  e_boxplot(Quantidade, outliers = T) |> 
+  e_tooltip(trigger = "axis",  valueFormatter = htmlwidgets::JS("
+                                        (value) => '' + Number(value).toFixed(0)
+                                        ")) |> 
+  e_title(text = "Boxplot - Classificações de Agendamento")
+```
+:::
+
+## Atendimentos
+
+::: panel-tabset
+## Parte A
+
+```{r}
+#| echo: false
+#| message: false
+#| error: false
+#| warning: false
+
+dfat |> filter(
+    Ano == 2024
+  ) |> group_by(Ano) |> 
+  summarise(Total = sum(Quantidade))|> 
+  # mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1)) |> 
+   kbl(caption = "Tabela 2.1. Frequência absoluta: Atendimentos.",
+      col.names = c("Ano", 
+                    "Frequência Absoluta"),
+        align = 'ccc',
+        ) |> 
+  kable_minimal(full_width = F, html_font = "Cambria", c("hover", "striped")) |> 
+  column_spec(1, color = "black", bold = T, italic = T) |> 
+  column_spec(2, color = "darkblue", bold = T) |> 
+  # column_spec(3, color = "darkred", bold = T) |> 
+  footnote(general = "Tasy.",
+           general_title = "Fonte: ", 
+           number_title = "Type I: ",
+           footnote_as_chunk = T) 
+```
+
+## Parte B
+
+```{r}
+#| echo: false
+#| message: false
+#| error: false
+#| warning: false
+
+dfat |> filter(
+   Ano == 2024
+  ) |> group_by(Ano, Classificacao) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1)) |> 
+  kbl(caption = "Tabela 2.2. Frequências absoluta e relativa: Classificações de Agendamento  <br><i>Valores agrupados por ano e classificações.</i>",
+      col.names = c("Ano", 
+                    "Classificações de Atendimento",
+                    "Frequência Absoluta",
+                    "Frequência relativa (em%)"),
+        align = 'ccc',
+        ) |> 
+  kable_minimal(full_width = F, html_font = "Cambria", c("hover", "striped")) |> 
+   column_spec(1, color = "black", bold = T, italic = T) |> 
+   column_spec(2, color = "darkgray", bold = F, italic = T) |> 
+  column_spec(3, color = "darkblue", bold = T) |> 
+  column_spec(4, color = "darkred", bold = T) |> 
+  footnote(general = "Tasy.",
+           general_title = "Fonte: ", 
+           number_title = "Type I: ",
+           footnote_as_chunk = T)
+```
+
+## Parte C
+
+```{r}
+#| echo: false
+#| message: false
+#| error: false
+#| warning: false
+
+
+dfat |> group_by(Classificacao) |>
+  filter(
+    Ano == 2024
+  ) |> 
+  e_charts(Meses, timeline = T) |> 
+  e_bar(Quantidade, symbol_size = 5,name = "Frequência:", itemStyle = list(
+    borderColor = "darkgrey", borderWidth = '.7') ) |> 
+  # e_labels(position = 'insideTop') |> 
+  e_legend(show = FALSE) |> 
+  e_theme("essos") |> 
+  e_tooltip(trigger = "axis",
+  valueFormatter = htmlwidgets::JS("
+              (value) => '' + Number(value).toFixed(0)
+                                        "))
+
+```
+
+## Parte D
+
+```{r}
+#| echo: false
+#| message: false
+#| error: false
+#| warning: false
+
+
+dfat |> 
+  filter(
+  Ano == 2024
+  ) |> group_by(Classificacao) |> 
+  e_charts() |> 
+  e_boxplot(Quantidade, outliers = T) |> 
+  e_tooltip(trigger = "axis",  valueFormatter = htmlwidgets::JS("
+                                        (value) => '' + Number(value).toFixed(0)
+                                        ")) |> 
+  e_title(text = "Boxplot - Classificações de Atendimento") |> 
+  e_theme("essos")
+
+```
+:::

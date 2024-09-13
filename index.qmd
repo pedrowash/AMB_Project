@@ -1,0 +1,24 @@
+# Pefácio {.unnumbered style="text-align:justify;"}
+
+Neste relatório serão apresentadas frequências (*absolutas* e *relativas*), bem como outras medidas estatísticas, relacionadas às consultas agendadas e atendidas no Serviço de Ginecologia e Mama (HAJ).
+
+A apresentação dos dados segue conforme fluxo abaixo:
+
+-   **Primeira parte:**
+
+    -   Dados do ano e período vigentes.
+
+-   **Segunda parte:**
+
+    -    Dados do ano e período vigentes comparados com o mesmo período dos anos anteriores.
+
+-   **Terceira parte:**
+
+    -   Dados do ano de 2023.
+
+-   **Quarta parte:**
+
+    -   Dados do ano de 2022.
+
+```         
+```

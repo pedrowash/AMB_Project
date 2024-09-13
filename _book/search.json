@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ambulatório",
+    "section": "",
+    "text": "Pefácio\nNeste relatório serão apresentadas frequências (absolutas e relativas), bem como outras medidas estatísticas, relacionadas às consultas agendadas e atendidas no Serviço de Ginecologia e Mama (HAJ).\nA apresentação dos dados segue conforme fluxo abaixo:\n\nPrimeira parte:\n\nDados do ano e período vigentes.\n\nSegunda parte:\n\nDados do ano e período vigentes comparados com o mesmo período dos anos anteriores.\n\nTerceira parte:\n\nDados do ano de 2023.\n\nQuarta parte:\n\nDados do ano de 2022."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Ano e Período vigentes",
+    "section": "",
+    "text": "Agendamentos\n\nPlotData\n\n\n\nPlot.rectY(data, \n  Plot.stackY(\n    Plot.binX( \n      {y: \"count\"}, \n      {x: \"body_mass_g\", fill: \"species\", thresholds: 20})\n    )\n  ).plot({\n    facet: {\n      data,\n      x: \"sex\"\n    },\n    marks: [Plot.frame()]\n  })\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)"
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n\n[1] 2"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "intro.html#agendamentos",
+    "href": "intro.html#agendamentos",
+    "title": "Ano e Período vigentes",
+    "section": "Agendamentos",
+    "text": "Agendamentos\n\nParte AParte BParte CParte D\n\n\n\n\n\nTabela 1.1. Frequências absoluta e relativa: Agendamentos.\nValores agrupados por ano.\n\n\nAno\nFrequência Absoluta\nFrequência relativa (em%)\n\n\n\n\n2022\n18207\n33.2\n\n\n2023\n18736\n34.1\n\n\n2024\n17941\n32.7\n\n\n\nFonte:   Tasy.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTabela 1.2. Frequências absoluta e relativa: Classificações de Agendamento\nValores agrupados por ano e classificações.\n\n\nAno\nClassificações de Agendamento\nFrequência Absoluta\nFrequência relativa (em%)\n\n\n\n\n2022\nAtendimentos efetuados\n16461\n90.4\n\n\n2022\nAtendimentos não efetuados\n1746\n9.6\n\n\n2023\nAtendimentos efetuados\n17229\n92.0\n\n\n2023\nAtendimentos não efetuados\n1507\n8.0\n\n\n2024\nAtendimentos efetuados\n17040\n95.0\n\n\n2024\nAtendimentos não efetuados\n901\n5.0\n\n\n\nFonte:   Tasy."
+  },
+  {
+    "objectID": "2024.html#agendamentos",
+    "href": "2024.html#agendamentos",
+    "title": "Ano: 2024 | Período: Janeiro - Agosto",
+    "section": "Agendamentos",
+    "text": "Agendamentos\n\nParte AParte BParte CParte D\n\n\n\n\n\nTabela 1.1. Frequência absoluta: Agendamentos.\n\n\nAno\nFrequência Absoluta\n\n\n\n\n2024\n17941\n\n\n\nFonte:   Tasy.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTabela 1.2. Frequências absoluta e relativa: Classificações de Agendamento\nValores agrupados por ano e classificações.\n\n\nAno\nClassificações de Agendamento\nFrequência Absoluta\nFrequência relativa (em%)\n\n\n\n\n2024\nAtendimentos efetuados\n17040\n95\n\n\n2024\nAtendimentos não efetuados\n901\n5\n\n\n\nFonte:   Tasy."
+  },
+  {
+    "objectID": "2024.html#atendimentos",
+    "href": "2024.html#atendimentos",
+    "title": "Ano: 2024 | Período: Janeiro - Agosto",
+    "section": "Atendimentos",
+    "text": "Atendimentos\n\nParte AParte BParte CParte D\n\n\n\n\n\nTabela 2.1. Frequência absoluta: Atendimentos.\n\n\nAno\nFrequência Absoluta\n\n\n\n\n2024\n17040\n\n\n\nFonte:   Tasy.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTabela 2.2. Frequências absoluta e relativa: Classificações de Agendamento\nValores agrupados por ano e classificações.\n\n\nAno\nClassificações de Atendimento\nFrequência Absoluta\nFrequência relativa (em%)\n\n\n\n\n2024\nInterconsulta\n431\n2.5\n\n\n2024\nPrimeira Vez\n1457\n8.6\n\n\n2024\nQuimioterapia\n3797\n22.3\n\n\n2024\nRetorno\n11355\n66.6\n\n\n\nFonte:   Tasy."
+  },
+  {
+    "objectID": "intro.html#atendimentos",
+    "href": "intro.html#atendimentos",
+    "title": "Ano e Período vigentes",
+    "section": "Atendimentos",
+    "text": "Atendimentos\n\nParte AParte BParte CParte D\n\n\n\n\n\nTabela 2.1. Frequências absoluta e relativa: Agendamentos.\nValores agrupados por ano.\n\n\nAno\nFrequência Absoluta\nFrequência relativa (em%)\n\n\n\n\n2022\n16461\n32.4\n\n\n2023\n17229\n34.0\n\n\n2024\n17040\n33.6\n\n\n\nFonte:   Tasy.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTabela 2.2. Frequências absoluta e relativa: Classificações de Agendamento\nValores agrupados por ano e classificações.\n\n\nAno\nClassificações de Atendimento\nFrequência Absoluta\nFrequência relativa (em%)\n\n\n\n\n2022\nInterconsulta\n303\n1.8\n\n\n2022\nPrimeira Vez\n1577\n9.6\n\n\n2022\nQuimioterapia\n2180\n13.2\n\n\n2022\nRetorno\n12401\n75.3\n\n\n2023\nInterconsulta\n272\n1.6\n\n\n2023\nPrimeira Vez\n1551\n9.0\n\n\n2023\nQuimioterapia\n3201\n18.6\n\n\n2023\nRetorno\n12205\n70.8\n\n\n2024\nInterconsulta\n431\n2.5\n\n\n2024\nPrimeira Vez\n1457\n8.6\n\n\n2024\nQuimioterapia\n3797\n22.3\n\n\n2024\nRetorno\n11355\n66.6\n\n\n\nFonte:   Tasy."
+  },
+  {
+    "objectID": "2023.html#agendamentos",
+    "href": "2023.html#agendamentos",
+    "title": "Ano: 2023 | Período: Janeiro - Dezembro",
+    "section": "Agendamentos",
+    "text": "Agendamentos\n\nParte AParte BParte CParte D\n\n\n\n\n\nTabela 3.1. Frequência absoluta: Agendamentos.\n\n\nAno\nFrequência Absoluta\n\n\n\n\n2023\n27063\n\n\n\nFonte:   Tasy.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTabela 3.2. Frequências absoluta e relativa: Classificações de Agendamento\nValores agrupados por ano e classificações.\n\n\nAno\nClassificações de Agendamento\nFrequência Absoluta\nFrequência relativa (em%)\n\n\n\n\n2023\nAtendimentos efetuados\n24924\n92.1\n\n\n2023\nAtendimentos não efetuados\n2139\n7.9\n\n\n\nFonte:   Tasy."
+  },
+  {
+    "objectID": "2023.html#atendimentos",
+    "href": "2023.html#atendimentos",
+    "title": "Ano: 2023 | Período: Janeiro - Dezembro",
+    "section": "Atendimentos",
+    "text": "Atendimentos\n\nParte AParte BParte CParte D\n\n\n\n\n\nTabela 2.1. Frequência absoluta: Atendimentos.\n\n\nAno\nFrequência Absoluta\n\n\n\n\n2023\n24924\n\n\n\nFonte:   Tasy.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTabela 2.2. Frequências absoluta e relativa: Classificações de Agendamento\nValores agrupados por ano e classificações.\n\n\nAno\nClassificações de Atendimento\nFrequência Absoluta\nFrequência relativa (em%)\n\n\n\n\n2023\nInterconsulta\n509\n2\n\n\n2023\nPrimeira Vez\n1991\n8\n\n\n2023\nQuimioterapia\n4733\n19\n\n\n2023\nRetorno\n17691\n71\n\n\n\nFonte:   Tasy."
+  },
+  {
+    "objectID": "2022.html#agendamentos",
+    "href": "2022.html#agendamentos",
+    "title": "Ano: 2022 | Período: Janeiro - Dezembro",
+    "section": "Agendamentos",
+    "text": "Agendamentos\n\nParte AParte BParte CParte D\n\n\n\n\n\nTabela 4.1. Frequência absoluta: Agendamentos.\n\n\nAno\nFrequência Absoluta\n\n\n\n\n2022\n26717\n\n\n\nFonte:   Tasy.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTabela 4.2. Frequências absoluta e relativa: Classificações de Agendamento\nValores agrupados por ano e classificações.\n\n\nAno\nClassificações de Agendamento\nFrequência Absoluta\nFrequência relativa (em%)\n\n\n\n\n2022\nAtendimentos efetuados\n24406\n91.4\n\n\n2022\nAtendimentos não efetuados\n2311\n8.6\n\n\n\nFonte:   Tasy."
+  },
+  {
+    "objectID": "2022.html#atendimentos",
+    "href": "2022.html#atendimentos",
+    "title": "Ano: 2022 | Período: Janeiro - Dezembro",
+    "section": "Atendimentos",
+    "text": "Atendimentos\n\nParte AParte BParte CParte D\n\n\n\n\n\nTabela 2.1. Frequência absoluta: Atendimentos.\n\n\nAno\nFrequência Absoluta\n\n\n\n\n2022\n24406\n\n\n\nFonte:   Tasy.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTabela 2.2. Frequências absoluta e relativa: Classificações de Agendamento\nValores agrupados por ano e classificações.\n\n\nAno\nClassificações de Atendimento\nFrequência Absoluta\nFrequência relativa (em%)\n\n\n\n\n2022\nInterconsulta\n416\n1.7\n\n\n2022\nPrimeira Vez\n2374\n9.7\n\n\n2022\nQuimioterapia\n3283\n13.5\n\n\n2022\nRetorno\n18333\n75.1\n\n\n\nFonte:   Tasy."
+  }
+]

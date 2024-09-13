@@ -1,0 +1,46 @@
+project:
+  type: book
+execute: 
+  echo: false
+  warning: false
+
+book:
+  title: "Ambulatório"
+  subtitle: "Estatísticas de Agendamentos e Atendimentos"
+  author: "Pedro Washington Silva Dantas"
+  description: '<b>Solicitante:</b> Dr. Eldom de Medeiros Soares <br>
+                CRM 17071 | <i>Cirurgia Oncológica</i>'
+  date: "11/09/2024"
+  
+  
+  chapters:
+    - index.qmd
+    - part: Parte 01
+      chapters: 
+        - 2024.qmd
+    - part: Parte 02
+      chapters: 
+        - intro.qmd
+    - part: Parte 03
+      chapters: 
+        - 2023.qmd
+    - part: Parte 04
+      chapters: 
+        - 2022.qmd
+    - part: Parte 05
+      chapters: 
+        - intro.qmd
+    - references.qmd
+
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: faltly
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
+lang: pt-br
