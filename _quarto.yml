@@ -1,5 +1,6 @@
 project:
   type: book
+
 execute: 
   echo: false
   warning: false
@@ -7,10 +8,11 @@ execute:
 book:
   title: "Ambulatório"
   subtitle: "Estatísticas de Agendamentos e Atendimentos"
-  author: "Pedro Washington Silva Dantas"
+  author: "Pedro Washington Silva Dantas<br><i>Ciência de Dados</i>"
   description: '<b>Solicitante:</b> Dr. Eldom de Medeiros Soares <br>
                 CRM 17071 | <i>Cirurgia Oncológica</i>'
-  date: "11/09/2024"
+  date: "09/13/2024"
+  
   
   
   chapters:
@@ -27,19 +29,13 @@ book:
     - part: Parte 04
       chapters: 
         - 2022.qmd
-    - part: Parte 05
-      chapters: 
-        - intro.qmd
-    - references.qmd
 
 
-bibliography: references.bib
+
 
 format:
   html:
     theme: faltly
-  pdf:
-    documentclass: scrreprt
 
 editor: visual
 

@@ -77,29 +77,6 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -209,7 +186,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, sharp corners, enhanced, borderline west={3pt}{0pt}{shadecolor}, interior hidden, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, frame hidden, breakable, interior hidden, sharp corners, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Índice}
 {
@@ -742,158 +719,6 @@ Ano & Classificações de Atendimento & Frequência Absoluta & Frequência relat
 \section{Parte D}
 
 \includegraphics{2022_files/figure-pdf/unnamed-chunk-9-1.pdf}
-
-\part{Parte 05}
-
-\hypertarget{ano-e-peruxedodo-vigentes-1}{%
-\chapter*{Ano e Período vigentes}\label{ano-e-peruxedodo-vigentes-1}}
-\addcontentsline{toc}{chapter}{Ano e Período vigentes}
-
-\markboth{Ano e Período vigentes}{Ano e Período vigentes}
-
-\hypertarget{agendamentos-4}{%
-\section*{Agendamentos}\label{agendamentos-4}}
-\addcontentsline{toc}{section}{Agendamentos}
-
-\markright{Agendamentos}
-
-\section{Parte A}
-
-\begin{table}
-\centering
-\caption{Tabela 1.1. Frequências absoluta e relativa: Agendamentos. <br><i>Valores agrupados por ano.</i>}
-\centering
-\begin{tabular}[t]{>{}c|>{}c|>{}c}
-\hline
-Ano & Frequência Absoluta & Frequência relativa (em\%)\\
-\hline
-\textcolor{black}{\em{\textbf{2022}}} & \textcolor{darkblue}{\textbf{18207}} & \textcolor{darkred}{\textbf{33.2}}\\
-\hline
-\textcolor{black}{\em{\textbf{2023}}} & \textcolor{darkblue}{\textbf{18736}} & \textcolor{darkred}{\textbf{34.1}}\\
-\hline
-\textcolor{black}{\em{\textbf{2024}}} & \textcolor{darkblue}{\textbf{17941}} & \textcolor{darkred}{\textbf{32.7}}\\
-\hline
-\multicolumn{3}{l}{\rule{0pt}{1em}\textit{Fonte: } Tasy.}\\
-\end{tabular}
-\end{table}
-
-\section{Parte B}
-
-\begin{table}
-\centering
-\caption{Tabela 1.2. Frequências absoluta e relativa: Classificações de Agendamento  <br><i>Valores agrupados por ano e classificações.</i>}
-\centering
-\begin{tabular}[t]{>{}c|>{}c|>{}c|>{}c}
-\hline
-Ano & Classificações de Agendamento & Frequência Absoluta & Frequência relativa (em\%)\\
-\hline
-\textcolor{black}{\em{\textbf{2022}}} & \textcolor{darkgray}{\em{Atendimentos efetuados}} & \textcolor{darkblue}{\textbf{16461}} & \textcolor{darkred}{\textbf{90.4}}\\
-\hline
-\textcolor{black}{\em{\textbf{2022}}} & \textcolor{darkgray}{\em{Atendimentos não efetuados}} & \textcolor{darkblue}{\textbf{1746}} & \textcolor{darkred}{\textbf{9.6}}\\
-\hline
-\textcolor{black}{\em{\textbf{2023}}} & \textcolor{darkgray}{\em{Atendimentos efetuados}} & \textcolor{darkblue}{\textbf{17229}} & \textcolor{darkred}{\textbf{92.0}}\\
-\hline
-\textcolor{black}{\em{\textbf{2023}}} & \textcolor{darkgray}{\em{Atendimentos não efetuados}} & \textcolor{darkblue}{\textbf{1507}} & \textcolor{darkred}{\textbf{8.0}}\\
-\hline
-\textcolor{black}{\em{\textbf{2024}}} & \textcolor{darkgray}{\em{Atendimentos efetuados}} & \textcolor{darkblue}{\textbf{17040}} & \textcolor{darkred}{\textbf{95.0}}\\
-\hline
-\textcolor{black}{\em{\textbf{2024}}} & \textcolor{darkgray}{\em{Atendimentos não efetuados}} & \textcolor{darkblue}{\textbf{901}} & \textcolor{darkred}{\textbf{5.0}}\\
-\hline
-\multicolumn{4}{l}{\rule{0pt}{1em}\textit{Fonte: } Tasy.}\\
-\end{tabular}
-\end{table}
-
-\section{Parte C}
-
-\includegraphics{intro_files/figure-pdf/unnamed-chunk-4-1.pdf}
-
-\section{Parte D}
-
-\includegraphics{intro_files/figure-pdf/unnamed-chunk-5-1.pdf}
-
-\hypertarget{atendimentos-4}{%
-\section*{Atendimentos}\label{atendimentos-4}}
-\addcontentsline{toc}{section}{Atendimentos}
-
-\markright{Atendimentos}
-
-\section{Parte A}
-
-\begin{table}
-\centering
-\caption{Tabela 2.1. Frequências absoluta e relativa: Agendamentos. <br><i>Valores agrupados por ano.</i>}
-\centering
-\begin{tabular}[t]{>{}c|>{}c|>{}c}
-\hline
-Ano & Frequência Absoluta & Frequência relativa (em\%)\\
-\hline
-\textcolor{black}{\em{\textbf{2022}}} & \textcolor{darkblue}{\textbf{16461}} & \textcolor{darkred}{\textbf{32.4}}\\
-\hline
-\textcolor{black}{\em{\textbf{2023}}} & \textcolor{darkblue}{\textbf{17229}} & \textcolor{darkred}{\textbf{34.0}}\\
-\hline
-\textcolor{black}{\em{\textbf{2024}}} & \textcolor{darkblue}{\textbf{17040}} & \textcolor{darkred}{\textbf{33.6}}\\
-\hline
-\multicolumn{3}{l}{\rule{0pt}{1em}\textit{Fonte: } Tasy.}\\
-\end{tabular}
-\end{table}
-
-\section{Parte B}
-
-\begin{table}
-\centering
-\caption{Tabela 2.2. Frequências absoluta e relativa: Classificações de Agendamento  <br><i>Valores agrupados por ano e classificações.</i>}
-\centering
-\begin{tabular}[t]{>{}c|>{}c|>{}c|>{}c}
-\hline
-Ano & Classificações de Atendimento & Frequência Absoluta & Frequência relativa (em\%)\\
-\hline
-\textcolor{black}{\em{\textbf{2022}}} & \textcolor{darkgray}{\em{Interconsulta}} & \textcolor{darkblue}{\textbf{303}} & \textcolor{darkred}{\textbf{1.8}}\\
-\hline
-\textcolor{black}{\em{\textbf{2022}}} & \textcolor{darkgray}{\em{Primeira Vez}} & \textcolor{darkblue}{\textbf{1577}} & \textcolor{darkred}{\textbf{9.6}}\\
-\hline
-\textcolor{black}{\em{\textbf{2022}}} & \textcolor{darkgray}{\em{Quimioterapia}} & \textcolor{darkblue}{\textbf{2180}} & \textcolor{darkred}{\textbf{13.2}}\\
-\hline
-\textcolor{black}{\em{\textbf{2022}}} & \textcolor{darkgray}{\em{Retorno}} & \textcolor{darkblue}{\textbf{12401}} & \textcolor{darkred}{\textbf{75.3}}\\
-\hline
-\textcolor{black}{\em{\textbf{2023}}} & \textcolor{darkgray}{\em{Interconsulta}} & \textcolor{darkblue}{\textbf{272}} & \textcolor{darkred}{\textbf{1.6}}\\
-\hline
-\textcolor{black}{\em{\textbf{2023}}} & \textcolor{darkgray}{\em{Primeira Vez}} & \textcolor{darkblue}{\textbf{1551}} & \textcolor{darkred}{\textbf{9.0}}\\
-\hline
-\textcolor{black}{\em{\textbf{2023}}} & \textcolor{darkgray}{\em{Quimioterapia}} & \textcolor{darkblue}{\textbf{3201}} & \textcolor{darkred}{\textbf{18.6}}\\
-\hline
-\textcolor{black}{\em{\textbf{2023}}} & \textcolor{darkgray}{\em{Retorno}} & \textcolor{darkblue}{\textbf{12205}} & \textcolor{darkred}{\textbf{70.8}}\\
-\hline
-\textcolor{black}{\em{\textbf{2024}}} & \textcolor{darkgray}{\em{Interconsulta}} & \textcolor{darkblue}{\textbf{431}} & \textcolor{darkred}{\textbf{2.5}}\\
-\hline
-\textcolor{black}{\em{\textbf{2024}}} & \textcolor{darkgray}{\em{Primeira Vez}} & \textcolor{darkblue}{\textbf{1457}} & \textcolor{darkred}{\textbf{8.6}}\\
-\hline
-\textcolor{black}{\em{\textbf{2024}}} & \textcolor{darkgray}{\em{Quimioterapia}} & \textcolor{darkblue}{\textbf{3797}} & \textcolor{darkred}{\textbf{22.3}}\\
-\hline
-\textcolor{black}{\em{\textbf{2024}}} & \textcolor{darkgray}{\em{Retorno}} & \textcolor{darkblue}{\textbf{11355}} & \textcolor{darkred}{\textbf{66.6}}\\
-\hline
-\multicolumn{4}{l}{\rule{0pt}{1em}\textit{Fonte: } Tasy.}\\
-\end{tabular}
-\end{table}
-
-\section{Parte C}
-
-\includegraphics{intro_files/figure-pdf/unnamed-chunk-8-1.pdf}
-
-\section{Parte D}
-
-\includegraphics{intro_files/figure-pdf/unnamed-chunk-9-1.pdf}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{references}{%
-\chapter*{References}\label{references}}
-\addcontentsline{toc}{chapter}{References}
-
-\markboth{References}{References}
-
-\hypertarget{refs}{}
-\begin{CSLReferences}{0}{0}
-\end{CSLReferences}
 
 
 

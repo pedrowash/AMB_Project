@@ -1,4 +1,3 @@
-
 ```{r}
 #| echo: false
 #| message: false
@@ -25,9 +24,10 @@ dfag$Agendamentos <- forcats::as_factor(dfag$Agendamentos)
 dfat$Ano <- forcats::as_factor(dfat$Ano)
 dfat$Meses <- forcats::as_factor(dfat$Meses)
 dfat$Classificacao<- forcats::as_factor(dfat$Classificacao)
+
 ```
 
-# Ano: 2024 | Período: Janeiro - Agosto {.unnumbered}
+# Ano: 2024 \| Período: Janeiro - Agosto {.unnumbered}
 
 ## Agendamentos
 

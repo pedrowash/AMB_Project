@@ -89,3 +89,20 @@ dfag |>
   e_title(text = "Boxplot - Classificações de Agendamento")
 
 
+
+
+
+
+
+##3
+
+library(apexcharter)
+apex(data = dfag, type = "column", mapping = aes(x = Meses, y = Quantidade))
+
+
+apex(data = dfag, type = "column", mapping = aes(x = Meses, y = Quantidade, fill = Agendamentos))
+
+dfag |> group_by(Agendamentos) |>  
+  filter(Ano == 2024) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  apex(type = "donut", mapping = aes(x = Agendamentos, y = Total))

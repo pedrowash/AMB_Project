@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: e85ab109-b143-4361-aa6b-92beeed648c8
+      url: 'https://wsdpedro.quarto.pub/agdambulatorio'

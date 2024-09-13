@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2023.10.17)  13 SEP 2024 11:44
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.9.13)  13 SEP 2024 13:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -456,15 +456,11 @@ Package graphics Info: Driver file: xetex.def on input line 107.
 )
 \Gin@req@height=\dimen173
 \Gin@req@width=\dimen174
-)
-\cslhangindent=\skip77
-\csllabelwidth=\skip78
-\cslentryspacingunit=\skip79
-(C:\Users\Pedro\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+) (C:\Users\Pedro\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip80
+\multirow@colwidth=\skip77
 \multirow@cntb=\count302
-\multirow@dima=\skip81
+\multirow@dima=\skip78
 \bigstrutjot=\dimen175
 ) (C:\Users\Pedro\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
 \wrapoverhang=\dimen176
@@ -483,7 +479,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 ) (C:\Users\Pedro\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
 \everycr=\toks31
-\minrowclearance=\skip82
+\minrowclearance=\skip79
 \rownum=\count305
 )
 (C:\Users\Pedro\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
@@ -509,13 +505,13 @@ Enter file name:
 ! Emergency stop.
 <read *> 
          
-l.113 \usepackage
-                 {threeparttable}^^M 
+l.90 \usepackage
+                {threeparttable}^^M 
 Here is how much of TeX's memory you used:
- 14457 strings out of 410379
- 293701 string characters out of 5788050
+ 14447 strings out of 410379
+ 293577 string characters out of 5788051
  1913416 words of memory out of 5000000
- 35694 multiletter control sequences out of 15000+600000
+ 35684 multiletter control sequences out of 15000+600000
  558085 words of font info for 38 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,1n,107p,10902b,271s stack positions out of 10000i,1000n,20000p,200000b,200000s
