@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="description" content="Solicitante: Dr.&nbsp;Eldom de Medeiros Soares   CRM 17071 | Cirurgia Oncológica">
 
-<title>Ambulatório - Ano: 2022 | Período: Janeiro - Dezembro</title>
+<title>Ano: 2022 | Período: Janeiro - Dezembro – Ambulatório (SUS)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Nenhum resultado",
     "search-matching-documents-text": "documentos correspondentes",
@@ -56,23 +62,35 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "mais correspondência neste documento",
     "search-more-matches-text": "mais correspondências neste documento",
     "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
   }
 }</script>
-
 <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+
 <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 <link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
 <script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="site_libs/apexcharter-binding-0.4.4/apexcharter.js"></script>
+
 <script src="site_libs/echarts4r-4.8.0/echarts-en.min.js"></script>
+
 <script src="site_libs/echarts4r-4.8.0/ecStat.min.js"></script>
+
 <script src="site_libs/echarts4r-4.8.0/dataTool.min.js"></script>
+
 <script src="site_libs/echarts4r-binding-0.4.5/echarts4r.js"></script>
+
 <script src="site_libs/essos-1.0.0/essos.js"></script>
 
 
+
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -81,13 +99,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2022.html">Parte 04</a></li><li class="breadcrumb-item"><a href="./2022.html">Ano: 2022 | Período: Janeiro - Dezembro</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2022.html">Parte 03</a></li><li class="breadcrumb-item"><a href="./2022.html">Ano: 2022 | Período: Janeiro - Dezembro</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -96,10 +114,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Ambulatório</a> 
+      <a href="./">Ambulatório (SUS)</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -112,14 +130,14 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pefácio</span></a>
+ <span class="menu-text">Prefácio</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Parte 01</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Alternar seção">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -127,37 +145,20 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./2024.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ano: 2024 | Período: Janeiro - Agosto</span></a>
+ <span class="menu-text">Ano: 2024 | Período: Janeiro - Setembro</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Parte 02</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Alternar seção">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ano e Período vigentes</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Parte 03</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./2023.html" class="sidebar-item-text sidebar-link">
@@ -168,13 +169,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
- <span class="menu-text">Parte 04</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Alternar seção">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte 03</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./2022.html" class="sidebar-item-text sidebar-link active">
@@ -186,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -201,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2022.html">Parte 03</a></li><li class="breadcrumb-item"><a href="./2022.html">Ano: 2022 | Período: Janeiro - Dezembro</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Ano: 2022 | Período: Janeiro - Dezembro</h1>
 </div>
@@ -216,18 +217,20 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <section id="agendamentos" class="level2">
 <h2 class="anchored" data-anchor-id="agendamentos">Agendamentos</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Parte A</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Parte B</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Parte C</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Parte D</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Parte A</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Parte B</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Parte C</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Parte D</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Parte E</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">Parte F</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
 <div class="cell-output-display">
-<table class="lightable-minimal lightable-striped lightable-hover table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Tabela 4.1. Frequência absoluta: Agendamentos.</caption>
+<table class="lightable-minimal lightable-striped lightable-hover caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Tabela 1.1. Frequência absoluta: Agendamentos.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: center;" data-quarto-table-cell-role="th">Ano</th>
@@ -255,8 +258,8 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell">
 <div class="cell-output-display">
-<table class="lightable-minimal lightable-striped lightable-hover table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Tabela 4.2. Frequências absoluta e relativa: Classificações de Agendamento<br>
+<table class="lightable-minimal lightable-striped lightable-hover caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Tabela 1.2. Frequências absoluta e relativa: Classificações de Agendamento<br>
 <em>Valores agrupados por ano e classificações.</em></caption>
 <thead>
 <tr class="header">
@@ -297,32 +300,139 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
 <div class="cell-output-display">
-<div class="echarts4r html-widget html-fill-item" id="htmlwidget-a112be580fe40cf182ca" style="width:100%;height:500px;"></div>
-<script type="application/json" data-for="htmlwidget-a112be580fe40cf182ca">{"x":{"theme":"essos","tl":true,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"baseOption":{"yAxis":[{"show":true}],"timeline":{"data":["Atendimentos efetuados","Atendimentos não efetuados"],"axisType":"category"},"xAxis":[{"data":["Jan/22","Fev/22","Mar/22","Abr/22","Mai/22","Jun/22","Jul/22","Ago/22","Set/22","Out/22","Nov/22","Dez/22"],"type":"category","boundaryGap":true}],"legend":{"data":["Frequência:"],"show":false,"type":"plain"},"series":[{"name":"Frequência:","type":"bar","yAxisIndex":0,"xAxisIndex":0,"coordinateSystem":"cartesian2d","symbol_size":5,"itemStyle":{"borderColor":"darkgrey","borderWidth":".7"}}],"tooltip":{"trigger":"axis","valueFormatter":"\n              (value) => '' + Number(value).toFixed(0)\n                                        "}},"options":[{"series":[{"data":[{"value":["Jan/22","1830"]},{"value":["Fev/22","1905"]},{"value":["Mar/22","2269"]},{"value":["Abr/22","1981"]},{"value":["Mai/22","2029"]},{"value":["Jun/22","2124"]},{"value":["Jul/22","2056"]},{"value":["Ago/22","2267"]},{"value":["Set/22","2175"]},{"value":["Out/22","1976"]},{"value":["Nov/22","1953"]},{"value":["Dez/22","1841"]}]}]},{"series":[{"data":[{"value":["Jan/22","173"]},{"value":["Fev/22","210"]},{"value":["Mar/22","317"]},{"value":["Abr/22","241"]},{"value":["Mai/22","233"]},{"value":["Jun/22","237"]},{"value":["Jul/22","199"]},{"value":["Ago/22","136"]},{"value":["Set/22","197"]},{"value":["Out/22","103"]},{"value":["Nov/22"," 92"]},{"value":["Dez/22","173"]}]}]}],"legend":{"data":["Frequência:","Frequência:"]}},"dispose":true},"evals":["opts.baseOption.tooltip.valueFormatter"],"jsHooks":[]}</script>
+<div class="apexcharter html-widget html-fill-item" id="htmlwidget-22b8b7ac9752973b04da" style="width:100%;height:350px;"></div>
+<script type="application/json" data-for="htmlwidget-22b8b7ac9752973b04da">{"x":{"ax_opts":{"chart":{"type":"bar"},"series":[{"name":"Atendimentos efetuados","type":"bar","data":[{"x":"Jan/22","y":1830},{"x":"Fev/22","y":1905},{"x":"Mar/22","y":2269},{"x":"Abr/22","y":1981},{"x":"Mai/22","y":2029},{"x":"Jun/22","y":2124},{"x":"Jul/22","y":2056},{"x":"Ago/22","y":2267},{"x":"Set/22","y":2175},{"x":"Out/22","y":1976},{"x":"Nov/22","y":1953},{"x":"Dez/22","y":1841}]},{"name":"Atendimentos não efetuados","type":"bar","data":[{"x":"Jan/22","y":173},{"x":"Fev/22","y":210},{"x":"Mar/22","y":317},{"x":"Abr/22","y":241},{"x":"Mai/22","y":233},{"x":"Jun/22","y":237},{"x":"Jul/22","y":199},{"x":"Ago/22","y":136},{"x":"Set/22","y":197},{"x":"Out/22","y":103},{"x":"Nov/22","y":92},{"x":"Dez/22","y":173}]}],"dataLabels":{"enabled":false},"plotOptions":{"bar":{"horizontal":false,"isDumbbell":false}},"tooltip":{"shared":true,"intersect":false,"followCursor":true},"grid":{"yaxis":{"lines":{"show":true}},"xaxis":{"lines":{"show":false}}},"yaxis":{"labels":{"style":{"colors":"#848484"}}},"xaxis":{"labels":{"style":{"colors":"#848484"}}},"title":{"text":"Gráfico 1.1. Freqências absolutas mensais - Classificações de Agendamentos","style":{"fontWeight":700,"fontSize":"16px"}},"subtitle":{"text":"","style":{"fontWeight":400,"fontSize":"14px"}}},"auto_update":{"series_animate":true,"update_options":false,"options_animate":true,"options_redrawPaths":true,"update_synced_charts":false},"sparkbox":false,"type":"column"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <div class="cell">
 <div class="cell-output-display">
-<div class="echarts4r html-widget html-fill-item" id="htmlwidget-8f46bbe82b19a8f62d85" style="width:100%;height:500px;"></div>
-<script type="application/json" data-for="htmlwidget-8f46bbe82b19a8f62d85">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"yAxis":[{"show":true}],"series":[{"name":"Quantidade","type":"boxplot","data":[[1830,1929,2005,2149.5,2269],[92,154.5,198,235,317]]},{"type":"scatter","data":[]}],"xAxis":[{"data":["Atendimentos efetuados","Atendimentos não efetuados"],"type":"category"}],"tooltip":{"trigger":"axis","valueFormatter":"\n                                        (value) => '' + Number(value).toFixed(0)\n                                        "},"title":[{"text":"Boxplot - Classificações de Agendamento"}]},"dispose":true},"evals":["opts.tooltip.valueFormatter"],"jsHooks":[]}</script>
+<table class="lightable-minimal lightable-striped lightable-hover caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Tabela 1.3. Frequências relativas (em %): Classificações de Agendamento<br>
+<em>Valores agrupados por mês e classificação.</em></caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">Meses</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Atendimentos efetuados</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Atendimentos não efetuados</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Jan/22</td>
+<td style="text-align: center; font-weight: bold; color: darkblue !important;">91.4</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">8.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Fev/22</td>
+<td style="text-align: center; font-weight: bold; color: darkblue !important;">90.1</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">9.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Mar/22</td>
+<td style="text-align: center; font-weight: bold; color: darkblue !important;">87.7</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">12.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Abr/22</td>
+<td style="text-align: center; font-weight: bold; color: darkblue !important;">89.2</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">10.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Mai/22</td>
+<td style="text-align: center; font-weight: bold; color: darkblue !important;">89.7</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">10.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Jun/22</td>
+<td style="text-align: center; font-weight: bold; color: darkblue !important;">90.0</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">10.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Jul/22</td>
+<td style="text-align: center; font-weight: bold; color: darkblue !important;">91.2</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">8.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Ago/22</td>
+<td style="text-align: center; font-weight: bold; color: darkblue !important;">94.3</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">5.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Set/22</td>
+<td style="text-align: center; font-weight: bold; color: darkblue !important;">91.7</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">8.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Out/22</td>
+<td style="text-align: center; font-weight: bold; color: darkblue !important;">95.0</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">5.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Nov/22</td>
+<td style="text-align: center; font-weight: bold; color: darkblue !important;">95.5</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">4.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Dez/22</td>
+<td style="text-align: center; font-weight: bold; color: darkblue !important;">91.4</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">8.6</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<td style="text-align: center; padding: 0;"><span style="font-style: italic;">Fonte: </span> <sup></sup> Tasy.</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tfoot>
+
+</table>
+
+
+</div>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="echarts4r html-widget html-fill-item" id="htmlwidget-512166820e5dc4dadb7c" style="width:100%;height:500px;"></div>
+<script type="application/json" data-for="htmlwidget-512166820e5dc4dadb7c">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"yAxis":[{"show":true}],"series":[{"name":"Agendamentos (GERAL)","type":"boxplot","data":[[2003,2062,2238.5,2366.5,2586]]},{"type":"scatter","data":[]}],"xAxis":[{"data":["Total"],"type":"category"}],"tooltip":{"trigger":"axis","valueFormatter":"\n                                        (value) => '' + Number(value).toFixed(0)\n                                        "},"title":[{"text":"Gráfico 1.2. Boxplot - Agendamentos"}]},"dispose":true},"evals":["opts.tooltip.valueFormatter"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="echarts4r html-widget html-fill-item" id="htmlwidget-41ece3486337244fba5e" style="width:100%;height:500px;"></div>
+<script type="application/json" data-for="htmlwidget-41ece3486337244fba5e">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"yAxis":[{"show":true}],"series":[{"name":"Quantidade","type":"boxplot","data":[[1830,1929,2005,2149.5,2269],[92,154.5,198,235,317]]},{"type":"scatter","data":[]}],"xAxis":[{"data":["Atendimentos efetuados","Atendimentos não efetuados"],"type":"category"}],"tooltip":{"trigger":"axis","valueFormatter":"\n                                        (value) => '' + Number(value).toFixed(0)\n                                        "},"title":[{"text":"Gráfico 1.3. Boxplot - Classificações de Agendamento"}]},"dispose":true},"evals":["opts.tooltip.valueFormatter"],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
 </div>
 </div>
+<blockquote class="blockquote">
+<p>RESUMO:</p>
+<blockquote class="blockquote">
+<p>No ano de 2022 a equipe teve <strong>26 717 agendamentos</strong>, dos quais <strong><em>91,4%</em></strong> (24 406) foram <em>efetivados</em> e <strong><em>8,6%</em></strong> (2 311) <em>cancelados</em>.</p>
+<p>A <strong>mediana</strong>* de <em>agendamentos</em> é de <strong>2 239</strong>, de <em>atendimentos efetuados</em> é <strong>2 005</strong> e de <em>atendimentos não efetuados</em> é <strong>198</strong>.</p>
+</blockquote>
+</blockquote>
+<div class="unnumbered" style="font-size: 13px; text-align:justify; background-color: #EAF0CE; padding: 15px 18px 12px 18px; border-radius: 10px 5% / 20px 25em 30px 35em;">
+
+</div>
+<hr>
 </section>
 <section id="atendimentos" class="level2">
 <h2 class="anchored" data-anchor-id="atendimentos">Atendimentos</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Parte A</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Parte B</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Parte C</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">Parte D</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Parte A</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Parte B</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Parte C</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">Parte D</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false">Parte E</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <div class="cell">
 <div class="cell-output-display">
-<table class="lightable-minimal lightable-striped lightable-hover table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Tabela 2.1. Frequência absoluta: Atendimentos.</caption>
+<table class="lightable-minimal lightable-striped lightable-hover caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Tabela 2.1. Frequência absoluta: Atendimentos - Total do período.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: center;" data-quarto-table-cell-role="th">Ano</th>
@@ -350,12 +460,11 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <div class="cell">
 <div class="cell-output-display">
-<table class="lightable-minimal lightable-striped lightable-hover table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Tabela 2.2. Frequências absoluta e relativa: Classificações de Agendamento<br>
-<em>Valores agrupados por ano e classificações.</em></caption>
+<table class="lightable-minimal lightable-striped lightable-hover caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Tabela 2.2. Frequências absoluta e relativa: Classificações de Atendimento.<br>
+<em>Valores agrupados por classificações conforme o total do período.</em></caption>
 <thead>
 <tr class="header">
-<th style="text-align: center;" data-quarto-table-cell-role="th">Ano</th>
 <th style="text-align: center;" data-quarto-table-cell-role="th">Classificações de Atendimento</th>
 <th style="text-align: center;" data-quarto-table-cell-role="th">Frequência Absoluta</th>
 <th style="text-align: center;" data-quarto-table-cell-role="th">Frequência relativa (em%)</th>
@@ -363,25 +472,21 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center; font-weight: bold; font-style: italic; color: black !important;">2022</td>
 <td style="text-align: center; font-style: italic; color: darkgray !important;">Interconsulta</td>
 <td style="text-align: center; font-weight: bold; color: darkblue !important;">416</td>
 <td style="text-align: center; font-weight: bold; color: darkred !important;">1.7</td>
 </tr>
 <tr class="even">
-<td style="text-align: center; font-weight: bold; font-style: italic; color: black !important;">2022</td>
 <td style="text-align: center; font-style: italic; color: darkgray !important;">Primeira Vez</td>
 <td style="text-align: center; font-weight: bold; color: darkblue !important;">2374</td>
 <td style="text-align: center; font-weight: bold; color: darkred !important;">9.7</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center; font-weight: bold; font-style: italic; color: black !important;">2022</td>
 <td style="text-align: center; font-style: italic; color: darkgray !important;">Quimioterapia</td>
 <td style="text-align: center; font-weight: bold; color: darkblue !important;">3283</td>
 <td style="text-align: center; font-weight: bold; color: darkred !important;">13.5</td>
 </tr>
 <tr class="even">
-<td style="text-align: center; font-weight: bold; font-style: italic; color: black !important;">2022</td>
 <td style="text-align: center; font-style: italic; color: darkgray !important;">Retorno</td>
 <td style="text-align: center; font-weight: bold; color: darkblue !important;">18333</td>
 <td style="text-align: center; font-weight: bold; color: darkred !important;">75.1</td>
@@ -389,7 +494,6 @@ ul.task-list li input[type="checkbox"] {
 </tbody><tfoot>
 <tr class="odd">
 <td style="text-align: center; padding: 0;"><span style="font-style: italic;">Fonte: </span> <sup></sup> Tasy.</td>
-<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
@@ -404,21 +508,160 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
 <div class="cell">
 <div class="cell-output-display">
-<div class="echarts4r html-widget html-fill-item" id="htmlwidget-95e8ff6f9d44cfbfd5ba" style="width:100%;height:500px;"></div>
-<script type="application/json" data-for="htmlwidget-95e8ff6f9d44cfbfd5ba">{"x":{"theme":"essos","tl":true,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"baseOption":{"yAxis":[{"show":true}],"timeline":{"data":["Interconsulta","Primeira Vez","Quimioterapia","Retorno"],"axisType":"category"},"xAxis":[{"data":["Jan/22","Fev/22","Mar/22","Abr/22","Mai/22","Jun/22","Jul/22","Ago/22","Set/22","Out/22","Nov/22","Dez/22"],"type":"category","boundaryGap":true}],"legend":{"data":["Frequência:"],"show":false,"type":"plain"},"series":[{"name":"Frequência:","type":"bar","yAxisIndex":0,"xAxisIndex":0,"coordinateSystem":"cartesian2d","symbol_size":5,"itemStyle":{"borderColor":"darkgrey","borderWidth":".7"}}],"tooltip":{"trigger":"axis","valueFormatter":"\n              (value) => '' + Number(value).toFixed(0)\n                                        "}},"options":[{"series":[{"data":[{"value":["Jan/22","31"]},{"value":["Fev/22","62"]},{"value":["Mar/22","83"]},{"value":["Abr/22","30"]},{"value":["Mai/22","25"]},{"value":["Jun/22","18"]},{"value":["Jul/22","28"]},{"value":["Ago/22","26"]},{"value":["Set/22","26"]},{"value":["Out/22","38"]},{"value":["Nov/22","31"]},{"value":["Dez/22","18"]}]}]},{"series":[{"data":[{"value":["Jan/22","166"]},{"value":["Fev/22","164"]},{"value":["Mar/22","191"]},{"value":["Abr/22","177"]},{"value":["Mai/22","202"]},{"value":["Jun/22","221"]},{"value":["Jul/22","208"]},{"value":["Ago/22","248"]},{"value":["Set/22","233"]},{"value":["Out/22","205"]},{"value":["Nov/22","185"]},{"value":["Dez/22","174"]}]}]},{"series":[{"data":[{"value":["Jan/22","211"]},{"value":["Fev/22","269"]},{"value":["Mar/22","294"]},{"value":["Abr/22","244"]},{"value":["Mai/22","282"]},{"value":["Jun/22","269"]},{"value":["Jul/22","273"]},{"value":["Ago/22","338"]},{"value":["Set/22","280"]},{"value":["Out/22","267"]},{"value":["Nov/22","288"]},{"value":["Dez/22","268"]}]}]},{"series":[{"data":[{"value":["Jan/22","1422"]},{"value":["Fev/22","1410"]},{"value":["Mar/22","1701"]},{"value":["Abr/22","1530"]},{"value":["Mai/22","1520"]},{"value":["Jun/22","1616"]},{"value":["Jul/22","1547"]},{"value":["Ago/22","1655"]},{"value":["Set/22","1636"]},{"value":["Out/22","1466"]},{"value":["Nov/22","1449"]},{"value":["Dez/22","1381"]}]}]}],"legend":{"data":["Frequência:","Frequência:","Frequência:","Frequência:"]}},"dispose":true},"evals":["opts.baseOption.tooltip.valueFormatter"],"jsHooks":[]}</script>
+<div class="echarts4r html-widget html-fill-item" id="htmlwidget-08d5783906617131e6c8" style="width:100%;height:500px;"></div>
+<script type="application/json" data-for="htmlwidget-08d5783906617131e6c8">{"x":{"theme":"essos","tl":true,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"baseOption":{"yAxis":[{"show":true}],"timeline":{"data":["Interconsulta","Primeira Vez","Quimioterapia","Retorno"],"axisType":"category","playInterval":2055},"xAxis":[{"data":["Jan/22","Fev/22","Mar/22","Abr/22","Mai/22","Jun/22","Jul/22","Ago/22","Set/22","Out/22","Nov/22","Dez/22"],"type":"category","boundaryGap":true}],"legend":{"data":["Frequência:"],"show":false,"type":"plain"},"series":[{"name":"Frequência:","type":"bar","yAxisIndex":0,"xAxisIndex":0,"coordinateSystem":"cartesian2d","symbol_size":5,"itemStyle":{"borderColor":"darkgrey","borderWidth":".7"},"label":{"show":true,"position":"insideTop","fontSize":14,"fontStyle":"bold"}}],"tooltip":{"trigger":"axis","valueFormatter":"\n              (value) => '' + Number(value).toFixed(0)\n                                        "},"title":[{"text":"Gráfico 2.1. Frequência absoluta mensal.","subtext":"Classificações de atendimento."}]},"options":[{"series":[{"data":[{"value":["Jan/22","31"]},{"value":["Fev/22","62"]},{"value":["Mar/22","83"]},{"value":["Abr/22","30"]},{"value":["Mai/22","25"]},{"value":["Jun/22","18"]},{"value":["Jul/22","28"]},{"value":["Ago/22","26"]},{"value":["Set/22","26"]},{"value":["Out/22","38"]},{"value":["Nov/22","31"]},{"value":["Dez/22","18"]}]}]},{"series":[{"data":[{"value":["Jan/22","166"]},{"value":["Fev/22","164"]},{"value":["Mar/22","191"]},{"value":["Abr/22","177"]},{"value":["Mai/22","202"]},{"value":["Jun/22","221"]},{"value":["Jul/22","208"]},{"value":["Ago/22","248"]},{"value":["Set/22","233"]},{"value":["Out/22","205"]},{"value":["Nov/22","185"]},{"value":["Dez/22","174"]}]}]},{"series":[{"data":[{"value":["Jan/22","211"]},{"value":["Fev/22","269"]},{"value":["Mar/22","294"]},{"value":["Abr/22","244"]},{"value":["Mai/22","282"]},{"value":["Jun/22","269"]},{"value":["Jul/22","273"]},{"value":["Ago/22","338"]},{"value":["Set/22","280"]},{"value":["Out/22","267"]},{"value":["Nov/22","288"]},{"value":["Dez/22","268"]}]}]},{"series":[{"data":[{"value":["Jan/22","1422"]},{"value":["Fev/22","1410"]},{"value":["Mar/22","1701"]},{"value":["Abr/22","1530"]},{"value":["Mai/22","1520"]},{"value":["Jun/22","1616"]},{"value":["Jul/22","1547"]},{"value":["Ago/22","1655"]},{"value":["Set/22","1636"]},{"value":["Out/22","1466"]},{"value":["Nov/22","1449"]},{"value":["Dez/22","1381"]}]}]}],"legend":{"data":["Frequência:","Frequência:","Frequência:","Frequência:"]}},"dispose":true},"evals":["opts.baseOption.tooltip.valueFormatter"],"jsHooks":[]}</script>
 </div>
+</div>
+<div class="unnumbered" style="font-size: 13px; text-align:center; background-color: #EAF0CE; padding: 15px 18px 12px 18px; border-radius: 15px 10% / 25px 30em 35px 40em;">
+<p>Interconsulta &lt;&gt; Primeira Vez &lt;&gt; Quimioterapia &lt;&gt; Retorno</p>
 </div>
 </div>
 <div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
 <div class="cell">
 <div class="cell-output-display">
-<div class="echarts4r html-widget html-fill-item" id="htmlwidget-eeb9f95348b4e8d4c130" style="width:100%;height:500px;"></div>
-<script type="application/json" data-for="htmlwidget-eeb9f95348b4e8d4c130">{"x":{"theme":"essos","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"yAxis":[{"show":true}],"series":[{"name":"Quantidade","type":"boxplot","data":[[18,25.5,29,34.5,38],[164,175.5,196.5,214.5,248],[244,267.5,271,285,294],[1381,1435.5,1525,1626,1701]]},{"type":"scatter","data":[[0,62],[0,83],[2,211],[2,338]]}],"xAxis":[{"data":["Interconsulta","Primeira Vez","Quimioterapia","Retorno"],"type":"category"}],"tooltip":{"trigger":"axis","valueFormatter":"\n                                        (value) => '' + Number(value).toFixed(0)\n                                        "},"title":[{"text":"Boxplot - Classificações de Atendimento"}]},"dispose":true},"evals":["opts.tooltip.valueFormatter"],"jsHooks":[]}</script>
+<table class="lightable-minimal lightable-striped lightable-hover caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Tabela 2.3. Frequências relativas mensais (em %): Classificações de Atendimento.<br>
+<em>Valores agrupados por mês e classificação.</em></caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">Meses</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Interconsulta</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Primeira Vez</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Quimioterapia</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Retorno</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Jan/22</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">1.7</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">9.1</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">11.5</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">77.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Fev/22</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">3.3</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">8.6</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">14.1</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">74.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Mar/22</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">3.7</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">8.4</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">13.0</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">75.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Abr/22</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">1.5</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">8.9</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">12.3</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">77.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Mai/22</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">1.2</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">10.0</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">13.9</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">74.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Jun/22</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">0.8</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">10.4</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">12.7</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">76.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Jul/22</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">1.4</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">10.1</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">13.3</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">75.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Ago/22</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">1.1</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">10.9</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">14.9</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">73.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Set/22</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">1.2</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">10.7</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">12.9</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">75.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Out/22</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">1.9</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">10.4</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">13.5</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">74.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Nov/22</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">1.6</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">9.5</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">14.7</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">74.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center; font-style: italic; color: darkgray !important;">Dez/22</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">1.0</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">9.5</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">14.6</td>
+<td style="text-align: center; font-weight: bold; color: darkred !important;">75.0</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<td style="text-align: center; padding: 0;"><span style="font-style: italic;">Fonte: </span> <sup></sup> Tasy.</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tfoot>
+
+</table>
+
+
+</div>
+</div>
+</div>
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="echarts4r html-widget html-fill-item" id="htmlwidget-c43c0cdc23824a954f6b" style="width:100%;height:500px;"></div>
+<script type="application/json" data-for="htmlwidget-c43c0cdc23824a954f6b">{"x":{"theme":"essos","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"yAxis":[{"show":true}],"series":[{"name":"Quantidade","type":"boxplot","data":[[18,25.5,29,34.5,38],[164,175.5,196.5,214.5,248],[244,267.5,271,285,294],[1381,1435.5,1525,1626,1701]]},{"type":"scatter","data":[[0,62],[0,83],[2,211],[2,338]]}],"xAxis":[{"data":["Interconsulta","Primeira Vez","Quimioterapia","Retorno"],"type":"category"}],"tooltip":{"trigger":"axis","valueFormatter":"\n                                        (value) => '' + Number(value).toFixed(0)\n                                        "},"title":[{"text":"Gráfico 2.2. Boxplot - Classificações de Atendimento"}]},"dispose":true},"evals":["opts.tooltip.valueFormatter"],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
 </div>
 </div>
+<blockquote class="blockquote">
+<p>RESUMO:</p>
+<blockquote class="blockquote">
+<p>Do total de atendimentos:</p>
+<ul>
+<li><p>Interconsulta = <strong><em>1,7%</em></strong> (416);</p></li>
+<li><p>Primeira Vez = <strong><em>9,7%</em></strong> (2 374);</p></li>
+<li><p>Quimioterapia = <strong><em>13,5%</em></strong> (3 283);</p></li>
+<li><p>Retorno = <strong><em>75,1%</em></strong> (18 333).</p></li>
+</ul>
+<p>A <strong>mediana</strong> de <em>atendimentos</em> de acordo com a classificação é:</p>
+<ul>
+<li><p>Interconsulta = <strong>29</strong>;</p></li>
+<li><p>Primeira Vez = <strong>197</strong>;</p></li>
+<li><p>Quimioterapia = <strong>271</strong>;</p></li>
+<li><p>Retorno = <strong>1 525</strong>.</p></li>
+</ul>
+</blockquote>
+</blockquote>
+<hr>
 
 
 </section>
@@ -459,18 +702,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -502,11 +734,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -516,8 +787,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -529,7 +809,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -573,6 +976,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -598,6 +1002,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -659,7 +1089,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./2023.html" class="pagination-link">
+      <a href="./2023.html" class="pagination-link" aria-label="Ano: 2023 | Período: Janeiro - Dezembro">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Ano: 2023 | Período: Janeiro - Dezembro</span>
       </a>          
   </div>
@@ -667,6 +1097,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

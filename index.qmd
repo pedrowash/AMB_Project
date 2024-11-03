@@ -1,16 +1,6 @@
-```{r}
-#| echo: false
-#| warning: false
-#| message: false
-#| error: false
+# Prefácio {.unnumbered style="text-align:justify;"}
 
-library(tinytex)
-
-```
-
-# Pefácio {.unnumbered style="text-align:justify;"}
-
-Neste relatório serão apresentadas frequências (*absolutas* e *relativas*), bem como outras medidas estatísticas, relacionadas às consultas agendadas e atendidas no Serviço de Ginecologia e Mama (HAJ).
+Neste relatório serão apresentadas frequências (*absolutas* e *relativas*), bem como outras medidas estatísticas relacionadas aos agendamentos (consultas efetuadas ou não efetuadas) do Serviço de Ginecologia e Mama (HAJ).
 
 A apresentação dos dados segue conforme fluxo abaixo:
 
@@ -20,13 +10,9 @@ A apresentação dos dados segue conforme fluxo abaixo:
 
 -   **Segunda parte:**
 
-    -   Dados do ano e período vigentes comparados com o mesmo período dos anos anteriores.
-
--   **Terceira parte:**
-
     -   Dados do ano de 2023.
 
--   **Quarta parte:**
+-   **Terceira parte:**
 
     -   Dados do ano de 2022.
 

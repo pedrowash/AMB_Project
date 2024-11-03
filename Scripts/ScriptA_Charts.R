@@ -1,5 +1,6 @@
 library(echarts4r)
 library(tidyverse)
+library(apexcharter)
 
 dfag <- read.csv("data/AGD.csv", header = T)
 dfat <- read.csv("data/ATD.csv", header = T)
@@ -79,14 +80,79 @@ dfag |>
       "Mar/23", "Abr/23",  "Mai/23",  "Jun/23", "Jul/23", 
       "Ago/23", "Jan/24", "Fev/24",  "Mar/24",  "Abr/24",  
       "Mai/24",  "Jun/24", "Jul/24", "Ago/24"
-    )
-  ) |> group_by(Agendamentos) |> 
+    ) 
+  ) |> group_by(Agendamentos) |>
   e_charts() |> 
   e_boxplot(Quantidade, outliers = T) |> 
   e_tooltip(trigger = "axis",  valueFormatter = htmlwidgets::JS("
                                         (value) => '' + Number(value).toFixed(0)
                                         ")) |> 
   e_title(text = "Boxplot - Classificações de Agendamento")
+
+
+####
+dfag |> 
+  filter(
+    Ano == 2024
+  ) |> group_by(Meses) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  e_charts() |> 
+  e_boxplot(Total, outliers = T) |> 
+  e_tooltip(trigger = "axis",  valueFormatter = htmlwidgets::JS("
+                                        (value) => '' + Number(value).toFixed(0)
+                                        ")) |> 
+  e_title(text = "Boxplot - Agendamentos")
+
+##
+
+dfat |> 
+  filter(
+    Ano == 2024
+  ) |> group_by(Meses) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  e_charts() |> 
+  e_boxplot(Total, outliers = T) |> 
+  e_tooltip(trigger = "axis",  valueFormatter = htmlwidgets::JS("
+                                        (value) => '' + Number(value).toFixed(0)
+                                        ")) |> 
+  e_title(text = "Boxplot - Atendimentos")
+#####
+
+
+dfag |> filter(
+  Ano == 2024
+) |> group_by(Meses, Agendamentos) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1))
+
+####
+
+
+
+
+
+dfag |> filter(
+  Ano == 2024
+) |> group_by(Meses, Agendamentos) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1)) |>
+  select(-Total) |> 
+  tidyr::pivot_wider(names_from = Agendamentos ,values_from = Freq_Rel) |> 
+  kbl(caption = "Tabela 1.3. Frequências relativas (em %): Classificações de Agendamento  <br><i>Valores agrupados por mês e classificação.</i>",
+    col.names = c("Meses", 	
+                  "Atendimentos efetuados",	
+                  "Atendimentos não efetuados"),
+    align = 'ccc',
+) |> 
+  kable_minimal(full_width = F, html_font = "Cambria", c("hover", "striped")) |> 
+  # column_spec(1, color = "black", bold = T, italic = T) |> 
+  column_spec(1, color = "darkgray", bold = F, italic = T) |> 
+  column_spec(2, color = "darkblue", bold = T) |> 
+  column_spec(3, color = "darkred", bold = T) |> 
+  footnote(general = "Tasy.",
+           general_title = "Fonte: ", 
+           number_title = "Type I: ",
+           footnote_as_chunk = T)
 
 
 
@@ -97,7 +163,12 @@ dfag |>
 ##3
 
 library(apexcharter)
-apex(data = dfag, type = "column", mapping = aes(x = Meses, y = Quantidade))
+
+dfag |> 
+  filter(Ano == 2024) |> 
+  group_by(Agendamentos) |>
+  # mutate(Freq_Rel = round(Quantidade/sum(Quantidade)*100,1)  ) |> 
+  apex(type = "column", mapping = aes(x = Meses, y = Quantidade, fill = Agendamentos))
 
 
 apex(data = dfag, type = "column", mapping = aes(x = Meses, y = Quantidade, fill = Agendamentos))
@@ -106,3 +177,145 @@ dfag |> group_by(Agendamentos) |>
   filter(Ano == 2024) |> 
   summarise(Total = sum(Quantidade)) |> 
   apex(type = "donut", mapping = aes(x = Agendamentos, y = Total))
+
+
+
+
+####3
+
+dfag |> 
+  filter(Ano == 2024) |> 
+  group_by(Agendamentos) |>
+  # mutate(Freq_Rel = round(Quantidade/sum(Quantidade)*100,1)  ) |> 
+  apex(type = "column", mapping = aes(x = Meses, y = Quantidade, fill = Agendamentos))
+
+
+apex(data = dfag, type = "column", mapping = aes(x = Meses, y = Quantidade, fill = Agendamentos))
+
+dfag |> group_by(Agendamentos) |>  
+  filter(Ano == 2024) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  apex(type = "donut", mapping = aes(x = Agendamentos, y = Total)) |>
+  ax_labs(
+    title = "Life expectancy : 1972 vs. 2007",
+    subtitle = "Data from Gapminder dataset")
+
+
+
+####  ERRADDOOOOOOOOO ===================================================
+
+dfag |> 
+  filter(Ano == 2024) |> 
+  group_by(Agendamentos) |> 
+  # summarise(Total = sum(Quantidade)) |> 
+  # mutate(Freq_Rel = round(Total/sum(Total)*100,1)  ) |> 
+  apex(aes(Agendamentos, Quantidade), "boxplot") %>% 
+    ax_plotOptions(
+      boxPlot = boxplot_opts(color.upper = "#8BB0A6", color.lower = "#8BB0A6" )
+    ) %>% 
+    ax_stroke(colors = list("#2A5744")) %>% 
+    ax_grid(
+      xaxis = list(lines = list(show = TRUE)),
+      yaxis = list(lines = list(show = FALSE))
+    ) |> 
+  ax_tooltip()
+
+######################################################################
+
+
+
+
+# 
+# dfag |> group_by(Agendamentos) |>
+#   filter(
+#    Ano == 2024
+#   ) |> 
+#   e_charts(Meses, timeline = T) |> 
+#   e_bar(Quantidade, symbol_size = 5,name = "Frequência:", itemStyle = list(
+#     borderColor = "darkgrey", borderWidth = '.7') ) |> 
+#   # e_labels(position = 'insideTop') |> 
+#   e_legend(show = FALSE) |> 
+#   e_theme("essos") |> 
+#   e_tooltip(trigger = "axis",
+#   valueFormatter = htmlwidgets::JS("
+#               (value) => '' + Number(value).toFixed(0)
+#                                         "))
+
+
+
+#### Parte B - Atendimentos
+dfat |> filter(
+  Ano == 2024
+) |> group_by(Ano, Classificacao) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1))
+
+# Alterado por:
+
+dfat |> filter(
+  Ano == 2024
+) |> group_by(Classificacao) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1)) 
+
+
+############
+dfat |> filter(
+  Ano == 2024
+) |> group_by(Meses, Classificacao) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1)) |>
+  select(-Total) |> 
+  tidyr::pivot_wider(names_from = Classificacao ,values_from = Freq_Rel) |> 
+  kbl(caption = "Tabela 2.3. Frequências relativas mensais (em %): Classificações de Atendimento.  <br><i>Valores agrupados por mês e classificação.</i>",
+      col.names = c("Meses", 	
+                    "Interconsulta", 
+                    "Primeira Vez", 
+                    "Quimioterapia",
+                    "Retorno"),
+      align = 'ccccc',
+  ) |> 
+  kable_minimal(full_width = F, html_font = "Cambria", c("hover", "striped")) |> 
+  # column_spec(1, color = "black", bold = T, italic = T) |> 
+  column_spec(1, color = "darkgray", bold = F, italic = T) |> 
+  column_spec(2, color = "darkred", bold = T) |> 
+  column_spec(3, color = "darkred", bold = T) |> 
+  column_spec(4, color = "darkred", bold = T) |> 
+  column_spec(5, color = "darkred", bold = T) |> 
+  footnote(general = "Tasy.",
+           general_title = "Fonte: ", 
+           number_title = "Type I: ",
+           footnote_as_chunk = T)
+
+
+
+####
+
+
+
+dfat |> group_by(Classificacao) |>
+  filter(
+    Ano == 2024
+  ) |> 
+  e_charts(Meses, timeline = T) |> 
+  e_bar(Quantidade, symbol_size = 5,name = "Frequência:", itemStyle = list(
+    borderColor = "darkgrey", borderWidth = '.7') ) |> 
+  e_labels(position = 'insideTop', fontSize = 16, fontStyle = 'bold') |> 
+  e_legend(show = FALSE) |> 
+  e_theme("essos") |> 
+  e_tooltip(trigger = "axis",
+            valueFormatter = htmlwidgets::JS("
+              (value) => '' + Number(value).toFixed(0)
+                                        "))
+
+
+
+
+#### Medianas
+dfag |> 
+  filter(
+    Ano == 2022
+  ) |> 
+  group_by(Meses) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  summarize(mediana = median(Total))

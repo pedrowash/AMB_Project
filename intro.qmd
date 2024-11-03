@@ -25,7 +25,7 @@ dfat$Meses <- forcats::as_factor(dfat$Meses)
 dfat$Classificacao<- forcats::as_factor(dfat$Classificacao)
 ```
 
-# Ano e Período vigentes {.unnumbered}
+# Ano e Período vigentes - Comparações {.unnumbered}
 
 ## Agendamentos
 

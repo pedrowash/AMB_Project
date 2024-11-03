@@ -11,6 +11,7 @@ library(plotly)
 library(echarts4r)
 library(quarto)
 library(kableExtra)
+library(apexcharter)
 
 
 # 
@@ -25,7 +26,7 @@ dfat$Meses <- forcats::as_factor(dfat$Meses)
 dfat$Classificacao<- forcats::as_factor(dfat$Classificacao)
 ```
 
-# Ano: 2023 \| Período: Janeiro - Dezembro {.unnumbered}
+# Ano: 2023 | Período: Janeiro - Dezembro {.unnumbered}
 
 ## Agendamentos
 
@@ -43,7 +44,7 @@ dfag |> filter(
   ) |> group_by(Ano) |> 
   summarise(Total = sum(Quantidade))|> 
   # mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1)) |> 
-   kbl(caption = "Tabela 3.1. Frequência absoluta: Agendamentos.",
+   kbl(caption = "Tabela 1.1. Frequência absoluta: Agendamentos.",
       col.names = c("Ano", 
                     "Frequência Absoluta"),
         align = 'ccc',
@@ -71,7 +72,7 @@ dfag |> filter(
   ) |> group_by(Ano, Agendamentos) |> 
   summarise(Total = sum(Quantidade)) |> 
   mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1)) |> 
-  kbl(caption = "Tabela 3.2. Frequências absoluta e relativa: Classificações de Agendamento  <br><i>Valores agrupados por ano e classificações.</i>",
+  kbl(caption = "Tabela 1.2. Frequências absoluta e relativa: Classificações de Agendamento  <br><i>Valores agrupados por ano e classificações.</i>",
       col.names = c("Ano", 
                     "Classificações de Agendamento",
                     "Frequência Absoluta",
@@ -98,24 +99,84 @@ dfag |> filter(
 #| warning: false
 
 
-dfag |> group_by(Agendamentos) |>
-  filter(
-   Ano == 2023
-  ) |> 
-  e_charts(Meses, timeline = T) |> 
-  e_bar(Quantidade, symbol_size = 5,name = "Frequência:", itemStyle = list(
-    borderColor = "darkgrey", borderWidth = '.7') ) |> 
-  # e_labels(position = 'insideTop') |> 
-  e_legend(show = FALSE) |> 
-  e_theme("essos") |> 
-  e_tooltip(trigger = "axis",
-  valueFormatter = htmlwidgets::JS("
-              (value) => '' + Number(value).toFixed(0)
-                                        "))
+
+
+
+dfag |> 
+  filter(Ano == 2023) |> 
+  group_by(Agendamentos) |>
+  # mutate(Freq_Rel = round(Quantidade/sum(Quantidade)*100,1)  ) |> 
+  apex(type = "column", 
+       mapping = aes(x = Meses, 
+                     y = Quantidade, 
+                     fill = Agendamentos)) |> 
+  ax_labs(
+    title = "Gráfico 1.1. Freqências absolutas mensais - Classificações de Agendamentos",
+    subtitle = ""
+    )
+
+
+
 
 ```
 
 ## Parte D
+
+```{r}
+#| echo: false
+#| message: false
+#| error: false
+#| warning: false
+
+
+dfag |> filter(
+  Ano == 2023
+) |> group_by(Meses, Agendamentos) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1)) |>
+  select(-Total) |> 
+  tidyr::pivot_wider(names_from = Agendamentos ,values_from = Freq_Rel) |> 
+  kbl(caption = "Tabela 1.3. Frequências relativas (em %): Classificações de Agendamento  <br><i>Valores agrupados por mês e classificação.</i>",
+    col.names = c("Meses", 	
+                  "Atendimentos efetuados",	
+                  "Atendimentos não efetuados"),
+    align = 'ccc',
+) |> 
+  kable_minimal(full_width = F, html_font = "Cambria", c("hover", "striped")) |> 
+  # column_spec(1, color = "black", bold = T, italic = T) |> 
+  column_spec(1, color = "darkgray", bold = F, italic = T) |> 
+  column_spec(2, color = "darkblue", bold = T) |> 
+  column_spec(3, color = "darkred", bold = T) |> 
+  footnote(general = "Tasy.",
+           general_title = "Fonte: ", 
+           number_title = "Type I: ",
+           footnote_as_chunk = T)
+
+
+```
+
+## Parte E
+
+```{r}
+
+#| echo: false
+#| message: false
+#| error: false
+#| warning: false
+dfag |> 
+  filter(
+    Ano == 2023
+  ) |> group_by(Meses) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  e_charts() |> 
+  e_boxplot(Total, outliers = T, name = "Agendamentos (GERAL)") |> 
+  e_tooltip(trigger = "axis",  valueFormatter = htmlwidgets::JS("
+                                        (value) => '' + Number(value).toFixed(0)
+                                        ")) |> 
+  e_title(text = "Gráfico 1.2. Boxplot - Agendamentos")
+```
+
+## Parte F
 
 ```{r}
 #| echo: false
@@ -133,13 +194,25 @@ dfag |>
   e_tooltip(trigger = "axis",  valueFormatter = htmlwidgets::JS("
                                         (value) => '' + Number(value).toFixed(0)
                                         ")) |> 
-  e_title(text = "Boxplot - Classificações de Agendamento")
+  e_title(text = "Gráfico 1.3. Boxplot - Classificações de Agendamento")
 ```
 :::
 
+> RESUMO:
+>
+> > No ano de 2023 a equipe teve **27 063 agendamentos**, dos quais ***92,1%*** (24 924) foram *efetivados* e ***7,9%*** (2 139) *cancelados*.
+> >
+> > A **mediana**\* de *agendamentos* é de **2 191**, de *atendimentos efetuados* é **2 019** e de *atendimentos não efetuados* é **176**.
+
+::: {.unnumbered style="font-size: 13px; text-align:justify; background-color: #EAF0CE; padding: 15px 18px 12px 18px; border-radius: 10px 5% / 20px 25em 30px 35em;"}
+\**Em vez da média, optou-se pela mediana, pois esta medida apresenta, dentre outras características, maior resistência a valores atípicos.*
+:::
+
+------------------------------------------------------------------------
+
 ## Atendimentos
 
-::: panel-tabset
+:::: panel-tabset
 ## Parte A
 
 ```{r}
@@ -153,7 +226,7 @@ dfat |> filter(
   ) |> group_by(Ano) |> 
   summarise(Total = sum(Quantidade))|> 
   # mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1)) |> 
-   kbl(caption = "Tabela 2.1. Frequência absoluta: Atendimentos.",
+   kbl(caption = "Tabela 2.1. Frequência absoluta: Atendimentos - Total do período.",
       col.names = c("Ano", 
                     "Frequência Absoluta"),
         align = 'ccc',
@@ -176,23 +249,27 @@ dfat |> filter(
 #| error: false
 #| warning: false
 
+
+
+
+
 dfat |> filter(
-   Ano == 2023
-  ) |> group_by(Ano, Classificacao) |> 
+  Ano == 2023
+) |> group_by(Classificacao) |> 
   summarise(Total = sum(Quantidade)) |> 
   mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1)) |> 
-  kbl(caption = "Tabela 2.2. Frequências absoluta e relativa: Classificações de Agendamento  <br><i>Valores agrupados por ano e classificações.</i>",
-      col.names = c("Ano", 
+  kbl(caption = "Tabela 2.2. Frequências absoluta e relativa: Classificações de Atendimento. <br><i>Valores agrupados por classificações conforme o total do período.</i>",
+      col.names = c( 
                     "Classificações de Atendimento",
                     "Frequência Absoluta",
                     "Frequência relativa (em%)"),
         align = 'ccc',
         ) |> 
   kable_minimal(full_width = F, html_font = "Cambria", c("hover", "striped")) |> 
-   column_spec(1, color = "black", bold = T, italic = T) |> 
-   column_spec(2, color = "darkgray", bold = F, italic = T) |> 
-  column_spec(3, color = "darkblue", bold = T) |> 
-  column_spec(4, color = "darkred", bold = T) |> 
+   # column_spec(1, color = "black", bold = T, italic = T) |> 
+   column_spec(1, color = "darkgray", bold = F, italic = T) |> 
+  column_spec(2, color = "darkblue", bold = T) |> 
+  column_spec(3, color = "darkred", bold = T) |> 
   footnote(general = "Tasy.",
            general_title = "Fonte: ", 
            number_title = "Type I: ",
@@ -215,17 +292,69 @@ dfat |> group_by(Classificacao) |>
   e_charts(Meses, timeline = T) |> 
   e_bar(Quantidade, symbol_size = 5,name = "Frequência:", itemStyle = list(
     borderColor = "darkgrey", borderWidth = '.7') ) |> 
-  # e_labels(position = 'insideTop') |> 
+  e_labels(position = 'insideTop',
+            fontSize = 14, 
+           fontStyle = 'bold') |> 
   e_legend(show = FALSE) |> 
-  e_theme("essos") |> 
   e_tooltip(trigger = "axis",
   valueFormatter = htmlwidgets::JS("
               (value) => '' + Number(value).toFixed(0)
-                                        "))
+                                        ")) |> 
+  e_theme("essos") |> 
+  e_timeline_opts(
+    axis_type = "category",
+    playInterval = 2055
+  ) |> 
+  e_title(text = "Gráfico 2.1. Frequência absoluta mensal.",
+          subtext = "Classificações de atendimento.")
 
 ```
 
+::: {.unnumbered style="font-size: 13px; text-align:center; background-color: #EAF0CE; padding: 15px 18px 12px 18px; border-radius: 15px 10% / 25px 30em 35px 40em;"}
+Interconsulta \<\> Primeira Vez \<\> Quimioterapia \<\> Retorno
+:::
+
 ## Parte D
+
+```{r}
+#| echo: false
+#| message: false
+#| error: false
+#| warning: false
+
+dfat |> filter(
+  Ano == 2023
+) |> group_by(Meses, Classificacao) |> 
+  summarise(Total = sum(Quantidade)) |> 
+  mutate(Freq_Rel = round( (Total/sum(Total)*100) ,1)) |>
+  select(-Total) |> 
+  tidyr::pivot_wider(names_from = Classificacao ,values_from = Freq_Rel) |> 
+  kbl(caption = "Tabela 2.3. Frequências relativas mensais (em %): Classificações de Atendimento.  <br><i>Valores agrupados por mês e classificação.</i>",
+      col.names = c("Meses", 	
+                    "Interconsulta", 
+                    "Primeira Vez", 
+                    "Quimioterapia",
+                    "Retorno"),
+      align = 'ccccc',
+  ) |> 
+  kable_minimal(full_width = F, html_font = "Cambria", c("hover", "striped")) |> 
+  # column_spec(1, color = "black", bold = T, italic = T) |> 
+  column_spec(1, color = "darkgray", bold = F, italic = T) |> 
+  column_spec(2, color = "darkred", bold = T) |> 
+  column_spec(3, color = "darkred", bold = T) |> 
+  column_spec(4, color = "darkred", bold = T) |> 
+  column_spec(5, color = "darkred", bold = T) |> 
+  footnote(general = "Tasy.",
+           general_title = "Fonte: ", 
+           number_title = "Type I: ",
+           footnote_as_chunk = T)
+
+
+
+
+```
+
+## Parte E
 
 ```{r}
 #| echo: false
@@ -243,8 +372,32 @@ dfat |>
   e_tooltip(trigger = "axis",  valueFormatter = htmlwidgets::JS("
                                         (value) => '' + Number(value).toFixed(0)
                                         ")) |> 
-  e_title(text = "Boxplot - Classificações de Atendimento") |> 
+  e_title(text = "Gráfico 2.2. Boxplot - Classificações de Atendimento") |> 
   e_theme("essos")
 
 ```
-:::
+::::
+
+> RESUMO:
+>
+> > Do total de atendimentos:
+> >
+> > -   Interconsulta = ***2%*** (509);
+> >
+> > -   Primeira Vez = ***8%*** (1 991);
+> >
+> > -   Quimioterapia = ***19%*** (4 733);
+> >
+> > -   Retorno = ***71%*** (17 691).
+> >
+> > A **mediana** de *atendimentos* de acordo com a classificação é:
+> >
+> > -   Interconsulta = **38**;
+> >
+> > -   Primeira Vez = **171**;
+> >
+> > -   Quimioterapia = **390**;
+> >
+> > -   Retorno = **1 432**.
+
+------------------------------------------------------------------------

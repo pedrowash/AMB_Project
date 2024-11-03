@@ -6,12 +6,14 @@ execute:
   warning: false
 
 book:
-  title: "Ambulatório"
+  title: "Ambulatório (SUS)"
   subtitle: "Estatísticas de Agendamentos e Atendimentos"
   author: "Pedro Washington Silva Dantas<br><i>Ciência de Dados</i>"
   description: '<b>Solicitante:</b> Dr. Eldom de Medeiros Soares <br>
                 CRM 17071 | <i>Cirurgia Oncológica</i>'
   date: "09/13/2024"
+  sidebar: 
+    background: "#F5F5F5"
   
   
   
@@ -22,20 +24,23 @@ book:
         - 2024.qmd
     - part: Parte 02
       chapters: 
-        - intro.qmd
+        - 2023.qmd
     - part: Parte 03
       chapters: 
-        - 2023.qmd
-    - part: Parte 04
-      chapters: 
         - 2022.qmd
+    # - part: Parte 04
+    #   chapters: 
+    #     - 2022.qmd
 
 
 
 
 format:
   html:
-    theme: faltly
+    theme: united
+    css: style.css
+    collapse: true
+    toc: true
 
 editor: visual
 
